@@ -7,7 +7,7 @@ window.onload = function(){
         document.getElementById('limit').innerHTML = parseInt(obj.limit);
         chrome.storage.sync.get('balance',function(obj){
           if(obj.balance)
-            document.getElementById('balance').innerHTML = parseInt(obj.balance);
+            document.getElementById('balance').innerHTML = abs(parseInt(obj.balance));
             set_color(parseInt(obj.balance));
         });
       }
